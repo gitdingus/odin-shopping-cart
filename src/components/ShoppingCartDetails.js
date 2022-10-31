@@ -25,10 +25,10 @@ function ShoppingCartDetails({shoppingCart}) {
 
             return (
               <tr key={uuid}>
-                <th>{title}</th>
-                <th>{price}</th>
-                <th>{quantity}</th>
-                <th>{price * quantity}</th>
+                <td>{title}</td>
+                <td>{price}</td>
+                <td>{quantity}</td>
+                <td>{price * quantity}</td>
               </tr>
             );
           })
