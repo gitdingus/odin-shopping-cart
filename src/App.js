@@ -18,7 +18,12 @@ function App() {
 
   return (
     <div>
-      <h1>There are {shoppingCart.length} items in your shopping cart</h1>
+      <h1>There are &nbsp;
+        {
+          shoppingCart.reduce((count, item) => {
+            return count += item.quantity;
+          }, 0)
+        } items in your shopping cart</h1>
       <Shop 
         addToShoppingCart={addToShoppingCart}
       />
