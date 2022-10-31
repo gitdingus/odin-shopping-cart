@@ -1,0 +1,4 @@
+.productCollection {
+  display: flex;
+  flex-wrap: wrap;
+}
