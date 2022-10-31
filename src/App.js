@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import Shop from './components/Shop.js';
+import ShoppingCartDetails from './components/ShoppingCartDetails.js';
+import useShoppingCart from './components/useShoppingCart.js';
 import './App.css';
 
 function App() {
+  const { 
+    shoppingCart,
+    addToShoppingCart,
+    removeFromShoppingCart,
+    editQuantityOfProduct,
+  } = useShoppingCart();
+
+  useEffect(() => {
+    console.log(shoppingCart);
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>There are {shoppingCart.length} items in your shopping cart</h1>
+      <Shop 
+        addToShoppingCart={addToShoppingCart}
+      />
+      <ShoppingCartDetails
+        shoppingCart={shoppingCart}
+      />
     </div>
   );
 }
