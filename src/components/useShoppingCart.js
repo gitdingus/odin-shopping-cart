@@ -21,7 +21,9 @@ function useShoppingCart() {
   };
 
   const removeFromShoppingCart = (uuid) => {
-    console.log(`Remove Product: ${uuid}`);
+    const newShoppingCart = shoppingCart.filter((product) => uuid !== product.uuid);
+
+    setShoppingCart(newShoppingCart);
   };
 
   const editQuantityOfProduct = (uuid, newQuantity) => {

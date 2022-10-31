@@ -29,6 +29,7 @@ function App() {
       />
       <ShoppingCartDetails
         shoppingCart={shoppingCart}
+        removeProduct={removeFromShoppingCart}
       />
     </div>
   );

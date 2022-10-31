@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ShoppingCartDetails({shoppingCart}) {
+function ShoppingCartDetails({shoppingCart, removeProduct}) {
   return (
     <table>
       <thead>
@@ -29,6 +29,7 @@ function ShoppingCartDetails({shoppingCart}) {
                 <td>{price}</td>
                 <td>{quantity}</td>
                 <td>{price * quantity}</td>
+                <td><button type="button" onClick={() => removeProduct(uuid)}>Remove</button></td>
               </tr>
             );
           })
