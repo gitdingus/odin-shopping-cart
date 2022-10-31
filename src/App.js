@@ -12,10 +12,6 @@ function App() {
     editQuantityOfProduct,
   } = useShoppingCart();
 
-  useEffect(() => {
-    console.log(shoppingCart);
-  })
-
   return (
     <div>
       <h1>There are &nbsp;
