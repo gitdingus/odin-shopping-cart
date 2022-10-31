@@ -3,12 +3,21 @@ import { useState } from 'react';
 function useShoppingCart() {
   const [ shoppingCart, setShoppingCart ] = useState([]);
 
-  const addToShoppingCart = (product) => {
-    const newProduct = {
-      ...product,
-      quantity: 1,
+  const addToShoppingCart = (newProduct) => {
+    let newShoppingCart = [...shoppingCart];
+    const existingProduct = newShoppingCart.find((product) => product.uuid === newProduct.uuid);
+
+    if (existingProduct !== undefined){
+      existingProduct.quantity += 1;
+    } else {
+      const product = {
+        ...newProduct,
+        quantity: 1,
+      };
+      newShoppingCart = [...newShoppingCart, product];
     }
-    setShoppingCart([...shoppingCart, newProduct]);
+  
+    setShoppingCart(newShoppingCart);
   };
 
   const removeFromShoppingCart = (uuid) => {
