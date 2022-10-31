@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div>
-      <h1>There are &nbsp;
+      <h1>There are&nbsp;
         {
           shoppingCart.reduce((count, item) => {
             return count += item.quantity;
@@ -26,6 +26,7 @@ function App() {
       <ShoppingCartDetails
         shoppingCart={shoppingCart}
         removeProduct={removeFromShoppingCart}
+        editQuantity={editQuantityOfProduct}
       />
     </div>
   );

@@ -27,7 +27,15 @@ function useShoppingCart() {
   };
 
   const editQuantityOfProduct = (uuid, newQuantity) => {
-    console.log(`Edit Product: ${uuid}, New Quantity: ${newQuantity}`);
+    if (newQuantity < 1) {
+      return;
+    }
+    let newShoppingCart = [...shoppingCart];
+    const existingProduct = newShoppingCart.find((product) => product.uuid === uuid);
+
+    existingProduct.quantity = newQuantity;
+
+    setShoppingCart(newShoppingCart);
   };
 
   return {
