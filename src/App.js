@@ -1,34 +1,37 @@
-import React, { useEffect } from 'react';
-import Shop from './components/Shop.js';
-import ShoppingCartDetails from './components/ShoppingCartDetails.js';
-import Header from './components/Header.js';
-import useShoppingCart from './components/useShoppingCart.js';
+import React from 'react';
+import Root from './routes/Root';
+import Shop from './routes/Shop.js';
+import ShoppingCartDetails from './routes/ShoppingCartDetails.js';
 import './App.css';
+import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
+import useShoppingCart from './components/useShoppingCart.js';
 
 function App() {
-  const { 
+  const {     
     shoppingCart,
     addToShoppingCart,
     removeFromShoppingCart,
     editQuantityOfProduct,
   } = useShoppingCart();
 
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Root shoppingCart={shoppingCart} />,
+      children: [
+        {
+          path: 'shop',
+          element: <Shop addToShoppingCart={addToShoppingCart} />,
+        },
+        {
+          path: 'cart',
+          element: <ShoppingCartDetails shoppingCart={shoppingCart} editQuantity={editQuantityOfProduct} removeProduct={removeFromShoppingCart} />,
+        }
+      ]
+    },
+  ]);
   return (
-    <div>
-      <Header itemsInCart={
-        shoppingCart.reduce((totalItems, product) => {
-          return totalItems + product.quantity;
-        }, 0)
-      } />
-      <Shop 
-        addToShoppingCart={addToShoppingCart}
-      />
-      <ShoppingCartDetails
-        shoppingCart={shoppingCart}
-        removeProduct={removeFromShoppingCart}
-        editQuantity={editQuantityOfProduct}
-      />
-    </div>
+    <RouterProvider router={router} />
   );
 }
 
