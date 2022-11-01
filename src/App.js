@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Shop from './components/Shop.js';
 import ShoppingCartDetails from './components/ShoppingCartDetails.js';
+import Header from './components/Header.js';
 import useShoppingCart from './components/useShoppingCart.js';
 import './App.css';
 
@@ -14,12 +15,11 @@ function App() {
 
   return (
     <div>
-      <h1>There are&nbsp;
-        {
-          shoppingCart.reduce((count, item) => {
-            return count += item.quantity;
-          }, 0)
-        } items in your shopping cart</h1>
+      <Header itemsInCart={
+        shoppingCart.reduce((totalItems, product) => {
+          return totalItems + product.quantity;
+        }, 0)
+      } />
       <Shop 
         addToShoppingCart={addToShoppingCart}
       />
