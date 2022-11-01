@@ -1,0 +1,20 @@
+.link {
+  text-decoration: none;
+  padding: 10px;
+  display: flex;
+
+  width: fit-content;
+}
+
+.link img {
+  width: 40px;
+  height: 40px;
+}
+
+.link p {
+  position: relative;
+  top: -8px;
+  margin: 0;
+
+  color: rgb(1, 1, 100);
+}
