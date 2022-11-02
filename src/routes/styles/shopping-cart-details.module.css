@@ -1,0 +1,56 @@
+.cart {
+  display: flex;
+  justify-content: center;
+}
+.cartDetails {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 60%;
+}
+
+.cartDetails th,
+.cartDetails td {
+  padding: 4px 12px;
+}
+
+.quantityCell {
+  display: flex;
+}
+
+.quantityCell button {
+  width: 25%;
+}
+
+.quantityCell input {
+  width: 50%;
+  text-align: right;
+  font-size: 14px;
+}
+
+.cartDetails thead th {
+  text-align: left;
+}
+
+.product {
+  width: 55%;
+}
+
+.price {
+  width: 10%;
+}
+
+.quantity {
+  width: 15%;
+}
+
+.total {
+  width: 10%;
+}
+
+.remove {
+  width: 10%;
+}
+
+.amount { 
+  text-align: right;
+}
