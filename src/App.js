@@ -30,7 +30,7 @@ function App() {
         },
         {
           path: 'shop/:uuid',
-          element: <ProductDetails />,
+          element: <ProductDetails addToCart={addToShoppingCart} />,
           loader: productDetailsLoader,
         },
       ]
