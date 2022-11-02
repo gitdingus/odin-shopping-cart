@@ -4,16 +4,17 @@ function useShoppingCart() {
   const [ shoppingCart, setShoppingCart ] = useState([]);
 
   const addToShoppingCart = (newProduct) => {
+    if (newProduct.quantity === undefined) {
+      newProduct.quantity = 1;
+    }
+
     let newShoppingCart = [...shoppingCart];
     const existingProduct = newShoppingCart.find((product) => product.uuid === newProduct.uuid);
 
     if (existingProduct !== undefined){
-      existingProduct.quantity += 1;
+      existingProduct.quantity += newProduct.quantity;
     } else {
-      const product = {
-        ...newProduct,
-        quantity: 1,
-      };
+      const product = {...newProduct};
       newShoppingCart = [...newShoppingCart, product];
     }
   
