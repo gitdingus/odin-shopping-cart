@@ -59,21 +59,20 @@ const comparatorFunction = (mode) => {
     function ProductCollection ({
       productList,
       requestAddToCart,
-      productClick,
     }) {
       const [sortOrder, setSortOrder] = useState("");
       const [products, setProducts] = useState(productList);
 
       const sortProducts = (e) => {
         setSortOrder(e.target.value);
-      }
+      };
 
       useEffect(() => {
         const newProducts = products.slice();
 
         newProducts.sort(comparatorFunction(sortOrder));
         setProducts(newProducts);
-      }, [sortOrder, products]);
+      }, [sortOrder]);
       
       return (
         <div>
