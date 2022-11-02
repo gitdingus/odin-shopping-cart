@@ -1,12 +1,13 @@
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styles from './styles/product-thumb.module.css';
 
 function ProductThumb ({
   product,
   requestAddToCart,
-  productClickedAction,
 }) {
+  const navigate = useNavigate();
   const { uuid, title, imagePath, price } = product;
   const addButton = useRef(null);
 
@@ -14,8 +15,7 @@ function ProductThumb ({
     if (e.target === addButton.current) {
       requestAddToCart(product);
     } else {
-      console.log(`Product ${title} clicked`);
-      productClickedAction(uuid);
+      navigate(`/shop/${uuid}`);
     }
   };
   
