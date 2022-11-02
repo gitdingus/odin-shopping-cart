@@ -1,8 +1,14 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 import productList from '../product-list.js';
 
-function ProductDetails({ uuid }){
-  const product = productList.find((product) => uuid === product.uuid);
+async function loader({ params }) {
+  const product = productList.find((product) => params.uuid === product.uuid);
+  return product;
+}
+
+function ProductDetails(){
+  const product = useLoaderData();
 
   return (
     <div>
@@ -11,4 +17,5 @@ function ProductDetails({ uuid }){
   )
 }
 
-export default ProductDetails
+export default ProductDetails;
+export { loader };
