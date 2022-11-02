@@ -4,10 +4,10 @@ import cartOutline from '../images/cart-outline.svg';
 
 function CartButton({itemsInCart}) {
   return (
-    <a className={styles.link} href="">
+    <div className={styles.link}>
       <img src={cartOutline} alt={`Shopping cart: ${itemsInCart} items`} />
       <p>{itemsInCart}</p>
-    </a>
+    </div>
   )
 }
 
