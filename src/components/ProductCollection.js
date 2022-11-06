@@ -56,51 +56,51 @@ const comparatorFunction = (mode) => {
   return sortFn;
 }
 
-    function ProductCollection ({
-      productList,
-      requestAddToCart,
-    }) {
-      const [sortOrder, setSortOrder] = useState("");
-      const [products, setProducts] = useState(productList);
+function ProductCollection ({
+  productList,
+  requestAddToCart,
+}) {
+  const [sortOrder, setSortOrder] = useState("");
+  const [products, setProducts] = useState(productList);
 
-      const sortProducts = (e) => {
-        setSortOrder(e.target.value);
-      };
+  const sortProducts = (e) => {
+    setSortOrder(e.target.value);
+  };
 
-      useEffect(() => {
-        const newProducts = products.slice();
+  useEffect(() => {
+    const newProducts = products.slice();
 
-        newProducts.sort(comparatorFunction(sortOrder));
-        setProducts(newProducts);
-      }, [sortOrder]);
-      
-      return (
-        <div>
-          <div className={styles.options}>
-            <label htmlFor="sort-order">Sort by:</label>
-            <select id="sort-order" value={sortOrder} onChange={sortProducts}>
-              <option value="alphabet-ascending">Alphabetical (A-z)</option>
-              <option value="alphabet-descending">Alphabetical (Z-a)</option>
-              <option value="price-ascending">Price (low-high)</option>
-              <option value="price-descending">Price (high-low)</option>
-            </select>
-          </div>
-          <div className={styles.productCollection}>
-            {
-              products.map((product) => {
-                return (
-                  <ProductThumb
-                    key={product.uuid}
-                    product={product}
-                    requestAddToCart={requestAddToCart}
-                  />
-                )
-              })
-            }
-          </div>
-        </div>
-      )
-    }
+    newProducts.sort(comparatorFunction(sortOrder));
+    setProducts(newProducts);
+  }, [sortOrder]);
+  
+  return (
+    <div>
+      <div className={styles.options}>
+        <label htmlFor="sort-order">Sort by:</label>
+        <select id="sort-order" value={sortOrder} onChange={sortProducts}>
+          <option value="alphabet-ascending">Alphabetical (A-z)</option>
+          <option value="alphabet-descending">Alphabetical (Z-a)</option>
+          <option value="price-ascending">Price (low-high)</option>
+          <option value="price-descending">Price (high-low)</option>
+        </select>
+      </div>
+      <div className={styles.productCollection}>
+        {
+          products.map((product) => {
+            return (
+              <ProductThumb
+                key={product.uuid}
+                product={product}
+                requestAddToCart={requestAddToCart}
+              />
+            )
+          })
+        }
+      </div>
+    </div>
+  )
+}
 
 ProductCollection.propTypes = {
   productList: PropTypes.arrayOf(PropTypes.shape({
