@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/odin-shopping-cart/static/css/main.67e9d6f5.css",
+    "main.js": "/odin-shopping-cart/static/js/main.3111fa6e.js",
+    "static/media/hero.jpg": "/odin-shopping-cart/static/media/hero.fbcb3dfb63ec44ff9e99.jpg",
+    "static/media/tape-measure.jpeg": "/odin-shopping-cart/static/media/tape-measure.d8a20f38690b4e623027.jpeg",
+    "static/media/woodworking-clamp.png": "/odin-shopping-cart/static/media/woodworking-clamp.7df511898ccd34d0aa86.png",
+    "static/media/woodworking-vise.jpg": "/odin-shopping-cart/static/media/woodworking-vise.79b0772ec86b30e87abe.jpg",
+    "static/media/hand-plane.jpg": "/odin-shopping-cart/static/media/hand-plane.e4f0d55de54d03605deb.jpg",
+    "static/media/woodworking-bench.jpg": "/odin-shopping-cart/static/media/woodworking-bench.7795ae5b545893594337.jpg",
+    "static/media/wood-glue.jpg": "/odin-shopping-cart/static/media/wood-glue.3776fbe59e7d25c351b8.jpg",
+    "static/media/pencil.jpeg": "/odin-shopping-cart/static/media/pencil.0948d34823aedbfd521f.jpeg",
+    "static/media/combination-square.jpg": "/odin-shopping-cart/static/media/combination-square.2189612e9a2ae0c9c816.jpg",
+    "static/media/chisel.jpg": "/odin-shopping-cart/static/media/chisel.0968c95aa650aea7ff1c.jpg",
+    "static/media/woodworking-mallet.jpg": "/odin-shopping-cart/static/media/woodworking-mallet.1bf55c1a584c60be580d.jpg",
+    "static/media/bevel-gauge.jpg": "/odin-shopping-cart/static/media/bevel-gauge.c877e556bffd9938291b.jpg",
+    "static/media/saw.jpg": "/odin-shopping-cart/static/media/saw.8eb25adb67f8ab290a70.jpg",
+    "static/media/cart-outline.svg": "/odin-shopping-cart/static/media/cart-outline.a97e6118fdc6331ef39d503fcf2fc533.svg",
+    "index.html": "/odin-shopping-cart/index.html",
+    "main.67e9d6f5.css.map": "/odin-shopping-cart/static/css/main.67e9d6f5.css.map",
+    "main.3111fa6e.js.map": "/odin-shopping-cart/static/js/main.3111fa6e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.67e9d6f5.css",
+    "static/js/main.3111fa6e.js"
+  ]
+}
