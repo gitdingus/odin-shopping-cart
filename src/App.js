@@ -1,5 +1,6 @@
 import React from 'react';
 import Root from './routes/Root';
+import Home from './routes/Home.js';
 import Shop from './routes/Shop.js';
 import ShoppingCartDetails from './routes/ShoppingCartDetails.js';
 import ProductDetails, { loader as productDetailsLoader } from './routes/ProductDetails.js';
@@ -20,6 +21,10 @@ function App() {
       path: '/',
       element: <Root shoppingCart={shoppingCart} />,
       children: [
+        {
+          index: true,
+          element: <Home />,
+        },
         {
           path: 'shop',
           element: <Shop addToShoppingCart={addToShoppingCart} />,
