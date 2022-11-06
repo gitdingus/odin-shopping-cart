@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/odin-shopping-cart/static/css/main.67e9d6f5.css",
-    "main.js": "/odin-shopping-cart/static/js/main.3111fa6e.js",
+    "main.js": "/odin-shopping-cart/static/js/main.4ceadf9d.js",
     "static/media/hero.jpg": "/odin-shopping-cart/static/media/hero.fbcb3dfb63ec44ff9e99.jpg",
     "static/media/tape-measure.jpeg": "/odin-shopping-cart/static/media/tape-measure.d8a20f38690b4e623027.jpeg",
     "static/media/woodworking-clamp.png": "/odin-shopping-cart/static/media/woodworking-clamp.7df511898ccd34d0aa86.png",
@@ -18,10 +18,10 @@
     "static/media/cart-outline.svg": "/odin-shopping-cart/static/media/cart-outline.a97e6118fdc6331ef39d503fcf2fc533.svg",
     "index.html": "/odin-shopping-cart/index.html",
     "main.67e9d6f5.css.map": "/odin-shopping-cart/static/css/main.67e9d6f5.css.map",
-    "main.3111fa6e.js.map": "/odin-shopping-cart/static/js/main.3111fa6e.js.map"
+    "main.4ceadf9d.js.map": "/odin-shopping-cart/static/js/main.4ceadf9d.js.map"
   },
   "entrypoints": [
     "static/css/main.67e9d6f5.css",
-    "static/js/main.3111fa6e.js"
+    "static/js/main.4ceadf9d.js"
   ]
 }
